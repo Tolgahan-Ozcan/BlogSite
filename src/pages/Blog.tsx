@@ -22,7 +22,6 @@ const Blog = () => {
         setPosts(allPosts);
         setFilteredPosts(allPosts);
         
-        // Extract unique categories
         const uniqueCategories = Array.from(
           new Set(allPosts.map((post) => post.category))
         );
@@ -39,7 +38,6 @@ const Blog = () => {
   }, []);
   
   useEffect(() => {
-    // Filter posts based on search term and category
     let results = posts;
     
     if (searchTerm) {
